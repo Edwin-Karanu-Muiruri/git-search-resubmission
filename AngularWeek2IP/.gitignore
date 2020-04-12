@@ -44,3 +44,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#Access Key
+environment.ts
+e37ba4b49c7f9ad2483c9d42eca09e7095431d6a
