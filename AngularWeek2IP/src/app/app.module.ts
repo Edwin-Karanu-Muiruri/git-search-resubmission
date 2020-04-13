@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     SearchResultsComponent,
-    NavbarComponent
+    NavbarComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
