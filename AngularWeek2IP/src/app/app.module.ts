@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     AboutComponent,
     SearchResultsComponent,
     NavbarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
