@@ -1,0 +1,12 @@
+.landingPage{
+    text-align: center;
+}
+.landingStatement{
+    font-size: xx-large;
+    margin: 70px;
+}
+.input-group{
+    width: 600px;
+    margin-left: 200px;
+    padding: 50px;
+}
