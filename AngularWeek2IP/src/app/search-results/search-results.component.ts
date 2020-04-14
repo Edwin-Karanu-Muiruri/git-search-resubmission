@@ -10,7 +10,7 @@ import{HttpClient} from '@angular/common/http';
 })
 export class SearchResultsComponent implements OnInit {
 
-  searchResults: SearchResultsComponent[];
+  searchResults: SearchResultsComponent;
   search:void;
   http: HttpClient;
   sResults: Search;
