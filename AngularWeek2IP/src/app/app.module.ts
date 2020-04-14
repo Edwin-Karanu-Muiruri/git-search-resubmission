@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import{NgProgressModule} from '@ngx-progressbar/core';
 import {NgProgressHttpClientModule} from '@ngx-progressbar/http-client';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     NgProgressModule,
-    NgProgressHttpClientModule
+    NgProgressHttpClientModule,
+    BrowserAnimationsModule,
+    HttpClientModule
 
   ],
   providers: [],
