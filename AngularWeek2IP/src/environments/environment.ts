@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  accessKey: 'e37ba4b49c7f9ad2483c9d42eca09e7095431d6a'
+  accessKey: 'e37ba4b49c7f9ad2483c9d42eca09e7095431d6a',
+  clientID:'62414394d3372d920f9d',
+  clientSecret:'455a434159f1f6156db843802c0d99b85f5f5bed'
 };
 
 /*

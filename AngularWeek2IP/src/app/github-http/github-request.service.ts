@@ -7,16 +7,27 @@ import {Search} from '../classes/search';
   providedIn: 'root'
 })
 export class GithubRequestService {
-  search: Search;
+  
+  profiles:any;
+  private Username: string;
+  
 
   constructor(private http:HttpClient) {
-    this.search = new Search('user','repository');
+    this.Username = "Edwin-Karanu-Muiruri"
    }
   
    searchRequest(){
-     interface ApiResponse{
-       user:string;
-       repository:string;
-     }
-    }
+    let promise = new Promise((resolve,reject)=>{
+    this.http.get("https://api.github.com/users/" + this.Username + "?client_id =" + environment.clientID+ "&client_secret=" + environment.clientSecret).toPromise().then(profiles =>{
+      this.profiles = profiles
+      resolve();
+      reject();
+    })
+    })
+    
   }
+  refreshProfile(username:string){
+    this.Username = username
+  }
+  
+}

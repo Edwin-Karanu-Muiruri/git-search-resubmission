@@ -11,22 +11,23 @@ import{HttpClient} from '@angular/common/http';
 export class SearchResultsComponent implements OnInit {
 
   searchResults: SearchResultsComponent;
-  search:void;
   http: HttpClient;
   sResults: Search;
+  profiles:any;
 
-  constructor(githubRequestService:GithubRequestService) {
-    this.search = githubRequestService.searchRequest()
+  constructor(public search:GithubRequestService) {
    }
+
 
   ngOnInit(): any {
     interface ApiResponse{
       users:string;
       repositories:string;
     }
-    this.http.get<ApiResponse>("https://api.github.com/users/edwin-karanu-muiruri?access_token= e37ba4b49c7f9ad2483c9d42eca09e7095431d6a").subscribe(data=>{
+    /*this.http.get<ApiResponse>("https://api.github.com/users?access_token=e37ba4b49c7f9ad2483c9d42eca09e7095431d6a&q=").subscribe(data=>{
       this.sResults = new Search(data.users, data.repositories)
-    })
+      console.log(data);
+    })*/
   }
 
 }

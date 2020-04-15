@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{NgProgressModule} from '@ngx-progressbar/core';
-import {NgProgressHttpClientModule} from '@ngx-progressbar/http-client';
 import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,8 +24,6 @@ import { from } from 'rxjs';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgProgressModule,
-    NgProgressHttpClientModule,
     BrowserAnimationsModule,
     HttpClientModule
 

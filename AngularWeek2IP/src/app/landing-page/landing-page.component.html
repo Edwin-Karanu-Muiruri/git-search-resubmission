@@ -8,11 +8,55 @@
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Enter a username or repo to search" aria-label="Recipient's username" aria-describedby="button-addon2" id="search" #search required>
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2" click ="searchRequest()">Search</button>
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click) =addUser()>Search</button>
             </div>
           </div>
+    </div>    
+</div>
+<div *ngIf= "profiles">
+    <div class="card">
+        <div class="card-title" appUnderline>
+            {{profiles.login}},<small>({{profiles.name}})</small>,<br>
+            <span *ngIf ="profiles.company">Works at {{profiles.company}}</span>
+            <span *ngIf = "profiles.location">:{{profiles.location}}</span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src={{profiles.avatar_url}} class="img-circle img-responsive">
+                </div>
+                <div class="col-md-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngIf = "profiles.bio">
+                            {{profiles.bio}}
+                        </li>
+                        <li class="list-group-item" *ngIf ="profiles.email">
+                            {{profiles.email}}
+                        </li>
+                    </ul>
+                    <div class="col-md-3">
+                        <p>
+                            <span >
+                             {{profiles.followers}}<br>followers
+                            </span>
+                            <br>
+                            <span>
+                                {{profiles.following}}<br>following
+                            </span>
+                            <span >
+                                 repos : {{profiles.public_repos}}
+                            </span>
+                            <span>
+                                Created on : {{profiles.created_at| date}}
+                            </span>
+                        </p>
+                        <p><a href="{{profiles.html_url}}" target="blank"><button class="btn btn-success btn-md">Github_profile</button></a></p>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
     </div>
-    <div class="socials">
-      
-    </div>
+    
 </div>
