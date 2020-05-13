@@ -1,4 +1,5 @@
 # GitSearchResubmission
+This is an angular app created to help users search for github repos and users.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
 
