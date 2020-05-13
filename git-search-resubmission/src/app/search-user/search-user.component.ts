@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { UserSearchInterface } from './user-search.interface';
 
 @Component({
   selector: 'app-search-user',
@@ -6,10 +8,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-user.component.css']
 })
 export class SearchUserComponent implements OnInit {
+  searchKeywords:string;
+  apiUrl = 'https://api.github.com/search/users?q=';
+  items:[];total_count=0;
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  searchUsers(){
+    let searchPromise = new Promise((proceed,terminate)=>{
+      this.http.get<UserSearchInterface>(this.apiUrl+this.searchKeywords).toPromise().then(data=>{
+        //requested successfully
+        this.items= data['items'];
+        this.total_count= data['total_count'];
+        proceed();
+      },error=>{
+        //terminate if failed
+        terminate()
+      })
+    })
+    searchPromise;
   }
 
 }
