@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { RepoSearchInterface } from './repo-search.interface'
+import { RepoSearchInterface } from './search-repo.interface'
 import $ from 'jquery';
 
 @Component({
